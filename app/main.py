@@ -52,13 +52,5 @@ class Dog(Animal):
 def feed_animals(list_animals: list) -> int:
     total_fed = 0
     for animal in list_animals:
-        if isinstance(animal, Cat) and animal.is_hungry:
-            animal.feed()
-            total_fed += 3
-        elif isinstance(animal, Dog) and animal.is_hungry:
-            animal.feed()
-            total_fed += 7
-        elif animal.is_hungry:
-            animal.feed()
-            total_fed += animal.appetite
+            total_fed += animal.feed()
     return total_fed
